@@ -1,0 +1,13 @@
+h1, h2 {text-align:center;}
+
+#transforms-div {float:left; min-width:60%;}
+#transforms-div h2 {margin-top:0;}
+#transforms li div {display:inline;}
+
+.custom-text-specifier {display:none;}
+.remove-transform {cursor:pointer; text-decoration:underline;}
+.remove-transform:hover {font-weight:bold;}
+
+#results table {border-collapse:collapse; width:100%;}
+#results table th {text-align:center;}
+#results table th, #results table td {border:1px solid #000000; width:50%;}

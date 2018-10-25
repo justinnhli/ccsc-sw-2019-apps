@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CCSC-SW 2019 Paper 52: Experience Report: Explorable Web Apps to Teach AI to Non-Majors</title>
+</head>
+<body>
+    <table>
+        {% for name, applet in applets %}
+        <tr>
+            <td><a href="{{ applet.url }}">{{ name }}</a></td>
+            <td>{{ applet.doc }}</td>
+        </tr>
+        {% endfor %}
+    </ul>
+</body>
+</html>

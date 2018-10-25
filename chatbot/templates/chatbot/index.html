@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Chatbot Demo</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('.static', filename='style.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="{{ url_for('static', filename='viz.js') }}"></script>
+        <script src="{{ url_for('.static', filename='main.js') }}"></script>
+    </head>
+    <body>
+        <div id="lhs">
+            <textarea id="editor" onchange="load_agent();">
+# You can create your own chatbot here.
+# Lines beginning with # are ignored.
+# Lines beginning with @ are patterns to be matched
+# Lines beginning with % are responses, randomly picked.
+# You can use any repeated capital letter in patterns.
+# The first pattern that matches is used as the reply.
+
+@Hi
+@Hello
+%How do you do. Please state your problem.
+%Hi. What seems to be your problem?
+
+@XXXXX computer
+@XXXXX computer YYYYY
+@XXXXX AI
+@XXXXX AI YYYYY
+@XXXXX artificial intelligence
+@XXXXX artificial intelligence YYYYY
+%Do computers worry you?
+%Why do you mention computers?
+%What do you think computers have to do with your problem?
+%Don't you think computers can help people?
+%What about AIs worries you?
+%What do you think about AIs?
+
+@I want XXXXX
+@I need XXXXX
+%What would it mean to you if you got XXXXX?
+%Why do you want XXXXX?
+%Suppose you got XXXXX soon?
+%What if you never got XXXXX?
+%What would getting XXXXX mean to you?
+%What does wanting XXXXX have to do with this discussion?
+
+@I am sad XXXXX
+@I am unhappy XXXXX
+@I am depressed XXXXX
+@I am sick XXXXX
+%I am sorry to hear that you are not feeling great.
+%Do you think that coming here will help?
+
+@I believe XXXXX I YYYYY
+%Do you really think so?
+%But you are not sure you YYYYY.
+%Do you really doubt you YYYYY?
+
+@You are XXXXX
+%What makes you think I am XXXXX?
+%Does it please you to believe I am XXXXX?
+%Do you sometimes wish you were XXXXX?
+%Perhaps you would like to be XXXXX.
+
+@I XXXXX you YYYYY
+%Perhaps in your fantasies we XXXXX each other.
+%Do you wish to XXXXX me?
+%You seem to need to XXXXX me.
+%Do you XXXXX anyone else?
+
+@XXXXX you YYYYY me ZZZZZ
+%Why do you think I YYYYY you?
+%You like to think I YYYYY you - don't you?
+%What makes you think I YYYYY you?
+%Really, I YYYYY you?
+%Do you wish to believe I YYYYY you?
+%Suppose I did YYYYY you - what would that mean?
+%Does someone else believe I YYYYY you?
+
+@I think XXXXX
+@I feel XXXXX
+%Is there a reason you feel XXXXX?
+%Can you explain why you think XXXXX?
+
+@I am XXXXX
+%Can you explain what made you XXXXX?
+%Is it because you are XXXXX that you came to me?
+%How long have you been XXXXX?
+%Do you believe it is normal to be XXXXX?
+%Do you enjoy being XXXXX?
+
+@XXXXX fuck YYYYY
+@XXXXX fucking YYYYY
+@XXXXX fucked YYYYY
+@XXXXX shit YYYYY
+@XXXXX shitting YYYYY
+@XXXXX shitted YYYYY
+%There's no need to be vulgar.
+%Let me wait until you've calmed down.
+%You seem angry - is something bothering you?
+
+@Yes
+@Yes XXXXX
+@Yes, XXXXX
+%You seem to be quite positive.
+%You are sure.
+%I see.
+%I understand.
+
+@No
+@No XXXXX
+@No, XXXXX
+%Are you saying no just to be negative?
+%You are being a bit negative.
+%Why not?
+%Why not?
+
+@Because XXXXX
+%Is that the real reason?
+%Don't any other reasons come to mind?
+%Does that reason seem to explain anything else?
+%What other reasons might there be?
+
+@
+%I'm not sure I understand what you mean.
+%Please go on.
+%What does that suggest to you?
+%Do you feel strongly about discussing such things?
+%Can you elaborate on that?
+            </textarea>
+            (Default rules from <a href="http://www.chayden.net/eliza/Eliza.html">Charles Hayden</a>)
+        </div>
+        <div id="rhs">
+            <textarea id="transcript" style="">
+            </textarea>
+            <span>
+                <input type="text" id="reply-text">
+                <button id="reply-button" onclick="interact();">Reply</button>
+            </span>
+        </div>
+        <script>init();</script>
+    </body>
+</html>

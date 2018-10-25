@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Course Catalog Information Extraction Assignment</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="static/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="static/style.css">
+    </head>
+
+    <body>
+
+        <h1><a href="">Course Catalog Information Extraction Assignment</a></h1>
+
+        <div id="controller">
+
+            <div id="transforms-div">
+                <h2>Text Transformations</h2>
+                <ol id="transforms">
+                </ol>
+                <button id="add-transform">Add Transform</button>
+                <button id="run">Run Program</button>
+                <p></p>
+                <button id="reset">Reset Transforms</button>
+            </div>
+
+            <div id="departments-div">
+                <h2>Catalog Data</h2>
+                <table id="departments">
+                    <tr>
+                        <td>
+                            <input type="checkbox" class="department" value="AMST">American Studies<br>
+                            <input type="checkbox" class="department" value="AHVA">Art History &amp; Visual Arts<br>
+                            <input type="checkbox" class="department" value="BICH">Biochemistry<br>
+                            <input type="checkbox" class="department" value="BIO">Biology<br>
+                            <input type="checkbox" class="department" value="CHEM">Chemistry<br>
+                            <input type="checkbox" class="department" value="COGS" checked="checked">Cognitive Science<br>
+                            <input type="checkbox" class="department" value="CSLC">Comparative Studies in Literature and Culture<br>
+                            <input type="checkbox" class="department" value="COMP" checked="checked">Computer Science<br>
+                            <input type="checkbox" class="department" value="CTSJ">Critical Theory &amp; Social Justice<br>
+                            <input type="checkbox" class="department" value="DWA">Diplomacy &amp; World Affairs<br>
+                            <input type="checkbox" class="department" value="ECON">Economics<br>
+                            <input type="checkbox" class="department" value="EDUC">Education<br>
+                            <input type="checkbox" class="department" value="ENGL">English<br>
+                            <input type="checkbox" class="department" value="GEO">Geology<br>
+                            <input type="checkbox" class="department" value="HIST">History<br>
+                            <input type="checkbox" class="department" value="KINE">Kinesiology<br>
+                        </td><td>
+                            <input type="checkbox" class="department" value="LLAS">Latino/a &amp; Latin American Studies<br>
+                            <input type="checkbox" class="department" value="LING">Linguistics<br>
+                            <input type="checkbox" class="department" value="MAC">Media Arts &amp; Culture<br>
+                            <input type="checkbox" class="department" value="MATH">Mathematics<br>
+                            <input type="checkbox" class="department" value="MUSC">Music<br>
+                            <input type="checkbox" class="department" value="PHIL">Philosophy<br>
+                            <input type="checkbox" class="department" value="PHYS">Physics<br>
+                            <input type="checkbox" class="department" value="POLS">Politics<br>
+                            <input type="checkbox" class="department" value="PSYC">Psychology<br>
+                            <input type="checkbox" class="department" value="RELS">Religious Studies<br>
+                            <input type="checkbox" class="department" value="SOC">Sociology<br>
+                            <input type="checkbox" class="department" value="SPAN">Spanish &amp; French Studies<br>
+                            <input type="checkbox" class="department" value="THEA">Theater<br>
+                            <input type="checkbox" class="department" value="UEP">Urban &amp; Environmental Policy<br>
+                            <input type="checkbox" class="department" value="WRD">Writing &amp; Rhetoric<br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div id="results">
+        </div>
+
+    </body>
+
+</html>
