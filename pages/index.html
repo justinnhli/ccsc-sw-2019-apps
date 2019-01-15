@@ -1,17 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>CCSC-SW 2019 Paper 52: Experience Report: Explorable Web Apps to Teach AI to Non-Majors</title>
-</head>
-<body>
-    <table>
-        {% for name, applet in applets %}
-        <tr>
-            <td><a href="{{ applet.url }}">{{ name }}</a></td>
-            <td>{{ applet.doc }}</td>
-        </tr>
-        {% endfor %}
-    </ul>
-</body>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>CCSC-SW 2019: Explorable Web Apps to Teach AI to Non-Majors</title>
+
+        <style>
+            body {margin:auto auto; width:80ex; max-width:95%;}
+            h1 {font-size:larger; text-align:center;}
+            table {border-collapse:collapse; width:100%;}
+            th, td {padding:0.25em;}
+            th {text-align:left;}
+            td {text-align:right;}
+        </style>
+    </head>
+    <body>
+        <h1>Explorable Web Apps to Teach AI to Non-Majors</h1>
+        <p>
+        This site contains three apps that were written by <a href="https://justinnhli.com/">Justin Li</a> as part of this teaching at <a href="https://www.oxy.edu/">Occidental College</a>.
+        His experience using these apps is described in the <a href="http://www.ccsc.org/southwestern/2019/index.php">CCSC-SW 2019</a> paper <a href="https://justinnhli.com/files/publications/Li2019ExplorableWebApps.pdf"><em>Explorable Web Apps to Teach AI to Non-Majors</em></a>.
+        The source code for the apps can be found on <a href="https://github.com/justinnhli/ccsc-sw-2019-apps">GitHub</a>.
+        </p>
+        <table>
+            <tr>
+                <th>Course Catalog Prerequisite Extraction</th>
+                <td><a href="/info_ret/">App</a></td>
+                <td><a href="/assignments/info_ret.html">Assignment</a></td>
+            </tr>
+            <tr>
+                <th>Pattern-Matching Chatbot</th>
+                <td><a href="/chatbot/">App</a></td>
+                <td><a href="/assignments/chatbot.html">Assignment</a></td>
+            </tr>
+            <tr>
+                <th>Bayesian Network Calculator</th>
+                <td><a href="/bayes/">App</a></td>
+                <td><a href="/assignments/bayes.html">Assignment</a></td>
+            </tr>
+        </table>
+    </body>
 </html>
