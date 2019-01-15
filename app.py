@@ -11,6 +11,7 @@ IGNORE_DIRS = ['pages', 'assignments', 'static']
 
 app = Flask(__name__)
 
+# automatically detect applets in subdirectories
 modules = {}
 for module_name in listdir(dirname(realpath(__file__))):
     if not isdir(module_name):
