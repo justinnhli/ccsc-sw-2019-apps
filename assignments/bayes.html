@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Bayesian Networks Assignment (CCSC-SW 2019: Explorable Web Apps to Teach AI to Non-Majors)</title>
+        <style>
+            body {margin:auto auto; width:80ex; max-width:95%;}
+            h1 {font-size:larger; text-align:center;}
+            table {border-collapse:collapse; width:100%;}
+            th, td {padding:0.25em;}
+            th {text-align:left;}
+            td {text-align:right;}
+            ol {list-style-type:decimal;}
+            ol ol {list-style-type:lower-alpha;}
+            ol ol ol {list-style-type:lower-roman;}
+        </style>
+    </head>
+    <body>
+        <h1>Bayesian Networks Assignment</h1>
+        <ol>
+            <li>
+                <p>Using the Bayesian network editor at <a href="http://ccsc-sw-2019-apps.herokuapp.com/bayes/">http://ccsc-sw-2019-apps.herokuapp.com/bayes/</a>, design a Bayesian network with at least nine nodes, and with at least one chain of four nodes, to show the causal relationships of a phenomenon you care about. Submit the code that generates your network.</p>
+            </li>
+            <li>
+                <p>Answer the following questions:</p>
+                <ol>
+                    <li>
+                        <p>Why did you decide to model what you did? What is interesting about it?</p>
+                    </li>
+                    <li>
+                        <p>Why are the nodes you included important to what you are modeling?</p>
+                    </li>
+                    <li>
+                        <p>How do you know that the causes and effects are correct? In other words, why is your network structured the way it is?</p>
+                    </li>
+                    <li>
+                        <p>Are your conditional probabilities justified by research literature, by experimental data, or merely by intuition or common sense? Please cite any literature or data used, and justify any probabilities which you made up.</p>
+                    </li>
+                    <li>
+                        <p>What other nodes might you add to the network? Why did you decide not to include them?</p>
+                    </li>
+                    <li>
+                        <p>Using the web app, demonstrate that your network approximates the phenomenon you want to model by showing how observing certain nodes leads to intuitively correct results. Assume I have no knowledge of what you are modeling (that is, explain why the answer is intuitively correct).</p>
+                    </li>
+                    <li>
+                        <p>Using the web app, look for predictions that surprise you. Record what you've tried, including the observations/evidence, the probabilities you expected, and the probabilities the network produced. Do the probabilities differ because something in your network is wrong, or is it because your intuition is wrong? How do you know?</p>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <p>To show that you have a basic grasp of the mathematics behind Bayesian networks, pick a chain of four nodes from near the top of your network (let's call them A -&gt; B -&gt; C -&gt; D). Provide an observation for B, then calculate by hand the probabilities for each possible values for A, C, and D. To reduce the mathematical tediousness of this process, you may select observations for nodes outside of A, B, C, and D. Check your answer with the web app.</p>
+            </li>
+        </ol>
+    </body>
+</html>

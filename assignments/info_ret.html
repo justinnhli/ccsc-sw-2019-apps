@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Information Extraction Assignment (CCSC-SW 2019: Explorable Web Apps to Teach AI to Non-Majors)</title>
+        <style>
+            body {margin:auto auto; width:80ex; max-width:95%;}
+            h1 {font-size:larger; text-align:center;}
+            table {border-collapse:collapse; width:100%;}
+            th, td {padding:0.25em;}
+            th {text-align:left;}
+            td {text-align:right;}
+            ol {list-style-type:decimal;}
+            ol ol {list-style-type:lower-alpha;}
+            ol ol ol {list-style-type:lower-roman;}
+        </style>
+    </head>
+    <body>
+        <h1>Information Extraction Assignment</h1>
+        <p>You may work with a partner on this homework; however, if you worked with a partner for a previous homework, I ask that you work with a <em>different</em> partner.</p>
+        <p>The goal of this assignment is for you to experience some of the problem solving necessary to extract information from natural language, and also some of the problems that you could encountered. The crux of this assignment is the web app at <a href="http://ccsc-sw-2019-apps.herokuapp.com/info_ret/">http://ccsc-sw-2019-apps.herokuapp.com/info_ret/</a>, which is a simple &quot;programming interface&quot; for manipulating text.</p>
+        <p>Your job, using that interface, is to extract out the prerequisites of the courses at Oxy, based only on their catalog description. In particular, you need to get the possible prerequisites on a line by itself, as a department code and number (eg. &quot;COGS 325&quot;). You should know right off the bat that it is impossible to get this correct for all courses, if only because of the limited web interface. Part of the point is that even with text as structured as a catalog, and even with fairly powerful operations such as replacing text, there is a huge variation in phrasing that makes it difficult to do this automatically.</p>
+        <p>Note: if you want to write a actual program to attempt this task, you can download the course descriptions <a href="https://github.com/justinnhli/ccsc-sw-2019-apps/blob/master/info_ret/data/catalog.txt">from Github</a>.</p>
+        <p>Once you've created a program that you're satisfied with, write a report describing your experience. Include your program in your report, and answer the following questions:</p>
+        <ol>
+            <li>What courses could you successfully extract prerequisite information from? What allowed your program to be successful for these courses?</li>
+            <li>What courses could you almost extract prerequisite information from? Why? <em>Without</em> changing the text of the catalog, what would have allowed your program to successfully extract prerequisite information?</li>
+            <li>What courses did you totally fail to extract prerequisite information from? Why? <em>Without</em> changing the text of the catalog, what would have allowed your program to successfully extract prerequisite information?</li>
+            <li>If you had to give your program a score out of 100, with 0 being an epic failure and 100 being a triumph, a huge success, what score would you give? Include lower and upper bounds on your score (ie. you think it would be unfair to go below/above those numbers), and justify your answer.</li>
+            <li>Pick another corpus of text, and some information you might want to extract out of it. What would make that task difficult?</li>
+            <li>What can you conclude about natural language processing/information retrieval from this exercise? Be specific in your answer.</li>
+            <li>What can you conclude about our ability to understand language from this exercise? Be specific in your answer.</li>
+        </ol>
+    </body>
+</html>
