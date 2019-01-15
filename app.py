@@ -7,7 +7,7 @@ from os.path import dirname, isdir, realpath, join as join_path
 
 from flask import abort, Flask, render_template, send_from_directory, url_for
 
-IGNORE_DIRS = ['pages', 'static']
+IGNORE_DIRS = ['pages', 'assignments', 'static']
 
 app = Flask(__name__)
 
@@ -27,6 +27,11 @@ for module_name in listdir(dirname(realpath(__file__))):
 @app.route('/')
 def root():
     return send_from_directory('pages', 'index.html')
+
+
+@app.route('/assignments/<filename>')
+def get_assignment(filename):
+    return send_from_directory('assignments', filename)
 
 
 @app.route('/<applet>/static/<filename>')
