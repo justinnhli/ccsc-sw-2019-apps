@@ -7,7 +7,7 @@ from os.path import dirname, isdir, realpath, join as join_path
 
 from flask import abort, Flask, render_template, send_from_directory, url_for
 
-IGNORE_DIRS = ['blueprint_template', 'static', 'templates']
+IGNORE_DIRS = ['pages', 'static']
 
 app = Flask(__name__)
 
@@ -42,17 +42,7 @@ def get_app_resource(applet, filename):
 
 @app.route('/')
 def root():
-    Applet = namedtuple('Applet', ('name', 'url', 'doc'))
-    applets = {}
-    for rule in app.url_map.iter_rules():
-        if not rule.endpoint.endswith('.root'):
-            continue
-        name = rule.endpoint.replace('.root', '').split('.')[0]
-        url = url_for(rule.endpoint)
-        doc = modules[name].__doc__
-        doc = doc.strip().splitlines()[0]
-        applets[name] = Applet(name, url, doc)
-    return render_template('index.html', applets=sorted(applets.items()))
+    return send_from_directory('pages', 'index.html')
 
 
 if __name__ == '__main__':
