@@ -37,13 +37,5 @@ def get_app_resource(applet, filename):
         return abort(404)
 
 
-@app.route('/static/<filename>')
-def resources(filename):
-    if filename.split('.')[-1] in ('css', 'js'):
-        return send_from_directory('static', filename)
-    else:
-        return abort(404)
-
-
 if __name__ == '__main__':
     app.run(debug=True)
